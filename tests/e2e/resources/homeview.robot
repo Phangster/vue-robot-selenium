@@ -10,11 +10,9 @@ Library           SeleniumLibrary
 ${SERVER}         localhost:8080
 ${BROWSER}        Firefox
 ${DELAY}          0
-${VALID USER}     bryan
-${VALID PASSWORD} 123456
+${username}       bryan
+${password}       123456
 ${LOGIN URL}      http://${SERVER}/
-${WELCOME URL}    http://${SERVER}/welcome.html
-${ERROR URL}      http://${SERVER}/error.html
 
 *** Keywords ***
 Open Browser To Login Page
@@ -40,7 +38,3 @@ Input Password
 
 Submit Credentials
     Click Button    login
-
-Welcome Page Should Be Open
-    Location Should Be    ${WELCOME URL}
-    Title Should Be    Welcome Page
