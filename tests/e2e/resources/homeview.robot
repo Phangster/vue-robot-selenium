@@ -5,6 +5,7 @@ Documentation     A resource file with reusable keywords and variables.
 ...               domain specific language. They utilize keywords provided
 ...               by the imported SeleniumLibrary.
 Library           SeleniumLibrary
+Library           ../lib/CustomLib.py
 
 *** Variables ***
 ${SERVER}         localhost:8080
@@ -64,3 +65,7 @@ Decode QR
     ${test}=  execute javascript    ${CURDIR}/../modules/qr.js
     Should Be Equal As Strings  ${test}  1
     sleep  5s
+
+Generate random email
+    ${random_email}     Generate Random Emails    ${8}
+    log to console  ${random_email}  

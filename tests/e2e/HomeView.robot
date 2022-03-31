@@ -8,6 +8,7 @@ Resource          ./resources/homeview.robot
 *** Test Cases ***
 Valid Login
     Open Browser To Login Page
+    Generate random email
     Input Username    bryan
     Input Password    123456
     Submit Credentials
