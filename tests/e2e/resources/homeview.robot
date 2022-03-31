@@ -38,3 +38,29 @@ Input Password
 
 Submit Credentials
     Click Button    login
+
+Welcome Page Should Be Open
+    ${text}=   Get Text    id:title
+    Should Contain Any    ${text}   Welcome
+
+Click On Link
+    Click Element       //*[@data-qa="wiki-link"]
+    ${text}=   Get Text     //*[@class="central-textlogo-wrapper"]
+    Should Contain Any    ${text}   Wikipedia
+
+Search On Wikipedia
+    Input Text  //*[@id="searchInput"]   Selenium
+    Click Element       class:pure-button
+    Title Should Be    Selenium - Wikipedia 
+    ${text}=   Get Text     //*[@id="firstHeading"]
+    Should Contain Any   ${text}   Selenium
+
+Check Iframe
+    Select Frame        //iframe[@id='iframe']
+    Current Frame Should Contain        MY BLOG
+    Unselect Frame
+
+Decode QR
+    ${test}=  execute javascript    ${CURDIR}/../modules/qr.js
+    Should Be Equal As Strings  ${test}  1
+    sleep  5s

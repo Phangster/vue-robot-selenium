@@ -5,7 +5,7 @@
   <div v-else class="text-center">
     <h2 id="title">Welcome Page, {{ userStore.state.name }}</h2>
     <div>
-      <a href="https://www.wikipedia.org/">Wikipedia link</a>
+      <a data-qa="wiki-link" href="https://www.wikipedia.org/">Wikipedia link</a>
     </div>
     <div class="qrcode">
       <img id="reader" class="my-image" :src="`data:image/png;base64,${testQR}`" alt="test"/>

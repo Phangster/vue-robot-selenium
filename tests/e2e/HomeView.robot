@@ -12,4 +12,8 @@ Valid Login
     Input Password    123456
     Submit Credentials
     Welcome Page Should Be Open
+    Decode QR
+    Check Iframe
+    Click On Link
+    Search On Wikipedia
     [Teardown]    Close Browser

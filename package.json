@@ -9,9 +9,14 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@nuintun/qrcode": "^3.1.1",
+    "@zxing/browser": "^0.1.1",
+    "@zxing/library": "^0.19.1",
     "blob-util": "^2.0.2",
     "core-js": "^3.8.3",
     "file-saver": "^2.0.5",
+    "pngjs": "^6.0.0",
+    "requirejs": "^2.3.6",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },
