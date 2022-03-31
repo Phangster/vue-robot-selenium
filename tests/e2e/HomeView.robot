@@ -8,7 +8,8 @@ Resource          ./resources/homeview.robot
 *** Test Cases ***
 Valid Login
     Open Browser To Login Page
-    Input Username
-    Input Password
+    Input Username    bryan
+    Input Password    123456
     Submit Credentials
+    Welcome Page Should Be Open
     [Teardown]    Close Browser
