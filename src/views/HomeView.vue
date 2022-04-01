@@ -34,7 +34,6 @@ import {
 } from 'vue';
 import userStore from '@/stores/user';
 import FormLogin from '@/components/FormLogin.vue';
-import FileSaver from 'file-saver';
 import { imgSrcToBlob, blobToBase64String } from 'blob-util';
 
 export default defineComponent({

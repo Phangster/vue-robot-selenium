@@ -4,7 +4,7 @@ Documentation     A resource file with reusable keywords and variables.
 ...               The system specific keywords created here form our own
 ...               domain specific language. They utilize keywords provided
 ...               by the imported SeleniumLibrary.
-Library           SeleniumLibrary
+Library           Selenium2Library
 Library           ../lib/CustomLib.py
 
 *** Variables ***
@@ -62,9 +62,14 @@ Check Iframe
     Unselect Frame
 
 Decode QR
-    ${test}=  execute javascript    ${CURDIR}/../modules/qr.js
-    Should Be Equal As Strings  ${test}  1
-    sleep  5s
+    # ${test}=  execute javascript    ${CURDIR}/../modules/qr.js
+    # log to console              ${test}
+    # Should Be Equal As Strings  ${test}  1
+    # sleep  5s
+    ${image_url} =   Get Element Attribute    //*[@id="reader"]    src
+    # log to console      ${image_url}
+    ${url}     Decode    ${image_url}
+    log to console  ${url}  
 
 Generate random email
     ${random_email}     Generate Random Emails    ${8}

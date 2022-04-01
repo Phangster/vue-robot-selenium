@@ -1,315 +1,216 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.9.10 on darwin)" generated="20220331 18:39:14.050" rpa="false" schemaversion="3">
-<suite id="s1" name="Vue-Robot-Selenium" source="/Users/bryanphang/Documents/Personal/vue-robot-selenium">
-<suite id="s1-s1" name="Tests" source="/Users/bryanphang/Documents/Personal/vue-robot-selenium/tests">
-<suite id="s1-s1-s1" name="E2E" source="/Users/bryanphang/Documents/Personal/vue-robot-selenium/tests/e2e">
-<suite id="s1-s1-s1-s1" name="HomeView" source="/Users/bryanphang/Documents/Personal/vue-robot-selenium/tests/e2e/HomeView.robot">
-<test id="s1-s1-s1-s1-t1" name="Valid Login" line="9">
+<robot generator="Robot 5.0 (Python 3.9.10 on darwin)" generated="20220401 14:34:19.326" rpa="false" schemaversion="3">
+<suite id="s1" name="HomeView" source="/Users/bryanphang/Documents/Personal/vue-robot-selenium/tests/e2e/HomeView.robot">
+<test id="s1-t1" name="Valid Login" line="9">
 <kw name="Open Browser To Login Page" library="homeview">
-<kw name="Open Browser" library="SeleniumLibrary">
+<kw name="Open Browser" library="Selenium2Library">
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220331 18:39:14.224" level="INFO">Opening browser 'Firefox' to base url 'http://localhost:8080/'.</msg>
-<msg timestamp="20220331 18:39:14.225" level="INFO">Firefox driver log is always forced to to: /Users/bryanphang/Documents/Personal/vue-robot-selenium/geckodriver-7.log</msg>
-<status status="PASS" starttime="20220331 18:39:14.224" endtime="20220331 18:39:16.437"/>
+<msg timestamp="20220401 14:34:19.808" level="INFO">Opening browser 'Firefox' to base url 'http://localhost:8080/'.</msg>
+<msg timestamp="20220401 14:34:19.809" level="INFO">Firefox driver log is always forced to to: /Users/bryanphang/Documents/Personal/vue-robot-selenium/geckodriver-1.log</msg>
+<status status="PASS" starttime="20220401 14:34:19.808" endtime="20220401 14:34:21.803"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220331 18:39:16.437" endtime="20220331 18:39:17.026"/>
+<status status="PASS" starttime="20220401 14:34:21.804" endtime="20220401 14:34:22.377"/>
 </kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<kw name="Set Selenium Speed" library="Selenium2Library">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220331 18:39:17.026" endtime="20220331 18:39:17.026"/>
+<status status="PASS" starttime="20220401 14:34:22.377" endtime="20220401 14:34:22.378"/>
 </kw>
 <kw name="Login Page Should Be Open" library="homeview">
-<kw name="Title Should Be" library="SeleniumLibrary">
+<kw name="Title Should Be" library="Selenium2Library">
 <arg>vue-robot-selenium</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220331 18:39:17.028" level="INFO">Page title is 'vue-robot-selenium'.</msg>
-<status status="PASS" starttime="20220331 18:39:17.027" endtime="20220331 18:39:17.029"/>
+<msg timestamp="20220401 14:34:22.380" level="INFO">Page title is 'vue-robot-selenium'.</msg>
+<status status="PASS" starttime="20220401 14:34:22.378" endtime="20220401 14:34:22.380"/>
 </kw>
-<status status="PASS" starttime="20220331 18:39:17.026" endtime="20220331 18:39:17.029"/>
+<status status="PASS" starttime="20220401 14:34:22.378" endtime="20220401 14:34:22.380"/>
 </kw>
-<status status="PASS" starttime="20220331 18:39:14.224" endtime="20220331 18:39:17.029"/>
+<status status="PASS" starttime="20220401 14:34:19.808" endtime="20220401 14:34:22.380"/>
 </kw>
 <kw name="Generate random email" library="homeview">
 <kw name="Generate Random Emails" library="CustomLib">
 <var>${random_email}</var>
 <arg>${8}</arg>
-<msg timestamp="20220331 18:39:17.030" level="INFO">${random_email} = ['ggiidcak@yahoo.com']</msg>
-<status status="PASS" starttime="20220331 18:39:17.029" endtime="20220331 18:39:17.030"/>
+<msg timestamp="20220401 14:34:22.380" level="INFO">${random_email} = ['ifeagfbk@yahoo.com']</msg>
+<status status="PASS" starttime="20220401 14:34:22.380" endtime="20220401 14:34:22.380"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${random_email}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220331 18:39:17.030" endtime="20220331 18:39:17.030"/>
+<status status="PASS" starttime="20220401 14:34:22.381" endtime="20220401 14:34:22.381"/>
 </kw>
-<status status="PASS" starttime="20220331 18:39:17.029" endtime="20220331 18:39:17.030"/>
+<status status="PASS" starttime="20220401 14:34:22.380" endtime="20220401 14:34:22.381"/>
 </kw>
 <kw name="Input Username" library="homeview">
 <arg>bryan</arg>
-<kw name="Input Text" library="SeleniumLibrary">
+<kw name="Input Text" library="Selenium2Library">
 <arg>username</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220331 18:39:17.031" level="INFO">Typing text 'bryan' into text field 'username'.</msg>
-<status status="PASS" starttime="20220331 18:39:17.030" endtime="20220331 18:39:17.050"/>
+<msg timestamp="20220401 14:34:22.382" level="INFO">Typing text 'bryan' into text field 'username'.</msg>
+<status status="PASS" starttime="20220401 14:34:22.381" endtime="20220401 14:34:22.416"/>
 </kw>
-<status status="PASS" starttime="20220331 18:39:17.030" endtime="20220331 18:39:17.050"/>
+<status status="PASS" starttime="20220401 14:34:22.381" endtime="20220401 14:34:22.416"/>
 </kw>
 <kw name="Input Password" library="homeview">
 <arg>123456</arg>
-<kw name="Input Text" library="SeleniumLibrary">
+<kw name="Input Text" library="Selenium2Library">
 <arg>password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220331 18:39:17.051" level="INFO">Typing text '123456' into text field 'password'.</msg>
-<status status="PASS" starttime="20220331 18:39:17.050" endtime="20220331 18:39:17.067"/>
+<msg timestamp="20220401 14:34:22.416" level="INFO">Typing text '123456' into text field 'password'.</msg>
+<status status="PASS" starttime="20220401 14:34:22.416" endtime="20220401 14:34:22.424"/>
 </kw>
-<status status="PASS" starttime="20220331 18:39:17.050" endtime="20220331 18:39:17.067"/>
+<status status="PASS" starttime="20220401 14:34:22.416" endtime="20220401 14:34:22.425"/>
 </kw>
 <kw name="Submit Credentials" library="homeview">
-<kw name="Click Button" library="SeleniumLibrary">
+<kw name="Click Button" library="Selenium2Library">
 <arg>login</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220331 18:39:17.067" level="INFO">Clicking button 'login'.</msg>
-<status status="PASS" starttime="20220331 18:39:17.067" endtime="20220331 18:39:17.281"/>
+<msg timestamp="20220401 14:34:22.425" level="INFO">Clicking button 'login'.</msg>
+<status status="PASS" starttime="20220401 14:34:22.425" endtime="20220401 14:34:22.637"/>
 </kw>
-<status status="PASS" starttime="20220331 18:39:17.067" endtime="20220331 18:39:17.281"/>
+<status status="PASS" starttime="20220401 14:34:22.425" endtime="20220401 14:34:22.637"/>
 </kw>
 <kw name="Welcome Page Should Be Open" library="homeview">
-<kw name="Get Text" library="SeleniumLibrary">
+<kw name="Get Text" library="Selenium2Library">
 <var>${text}</var>
 <arg>id:title</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220331 18:39:17.293" level="INFO">${text} = Welcome Page, Bryan</msg>
-<status status="PASS" starttime="20220331 18:39:17.282" endtime="20220331 18:39:17.293"/>
+<msg timestamp="20220401 14:34:22.647" level="INFO">${text} = Welcome Page, Bryan</msg>
+<status status="PASS" starttime="20220401 14:34:22.638" endtime="20220401 14:34:22.647"/>
 </kw>
 <kw name="Should Contain Any" library="BuiltIn">
 <arg>${text}</arg>
 <arg>Welcome</arg>
 <doc>Fails if ``container`` does not contain any of the ``*items``.</doc>
-<status status="PASS" starttime="20220331 18:39:17.293" endtime="20220331 18:39:17.293"/>
+<status status="PASS" starttime="20220401 14:34:22.647" endtime="20220401 14:34:22.647"/>
 </kw>
-<status status="PASS" starttime="20220331 18:39:17.281" endtime="20220331 18:39:17.293"/>
+<status status="PASS" starttime="20220401 14:34:22.637" endtime="20220401 14:34:22.647"/>
 </kw>
 <kw name="Decode QR" library="homeview">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<var>${test}</var>
-<arg>/Users/bryanphang/Documents/Personal/vue-robot-selenium/tests/e2e/resources/../modules/qr.js</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220331 18:39:17.295" level="INFO" html="true">Reading JavaScript from file &lt;a href="file:///Users/bryanphang/Documents/Personal/vue-robot-selenium/tests/e2e/resources/../modules/qr.js"&gt;/Users/bryanphang/Documents/Personal/vue-robot-selenium/tests/e2e/resources/../modules/qr.js&lt;/a&gt;.</msg>
-<msg timestamp="20220331 18:39:17.296" level="INFO">Executing JavaScript:
-/* eslint-disable max-len */
-/* eslint-disable no-bitwise */
-// const { BrowserQRCodeReader } = require('@zxing/browser');
-
-// const codeReader = new BrowserQRCodeReader();
-// const base64 = document.getElementById('reader').src;
-return 1;
-// const resultImage = codeReader.decodeFromImageElement(url);
-// const {
-//   MultiFormatReader,
-//   BarcodeFormat,
-//   DecodeHintType,
-//   RGBLuminanceSource,
-//   BinaryBitmap,
-//   HybridBinarizer,
-// } = require('@zxing/library');
-
-// const { PNG } = require('pngjs');
-
-// const rawImageData = PNG.sync.read(Buffer.from(base64.split(';base64,')[1], 'base64'));
-
-// const hints = new Map();
-// const formats = [BarcodeFormat.QR_CODE, BarcodeFormat.DATA_MATRIX];
-
-// hints.set(DecodeHintType.POSSIBLE_FORMATS, formats);
-// hints.set(DecodeHintType.TRY_HARDER, true);
-
-// const reader = new MultiFormatReader();
-
-// reader.setHints(hints);
-
-// const len = rawImageData.width * rawImageData.height;
-
-// const luminancesUint8Array = new Uint8ClampedArray(len);
-// for (let i = 0; i &lt; len; i += 1) {
-//   luminancesUint8Array[i] = ((rawImageData.data[i * 4] + rawImageData.data[i * 4 + 1] * 2 + rawImageData.data[i * 4 + 2]) / 4) &amp; 0xFF;
-// }
-
-// const luminanceSource = new RGBLuminanceSource(luminancesUint8Array, rawImageData.width, rawImageData.height);
-
-// const binaryBitmap = new BinaryBitmap(new HybridBinarizer(luminanceSource));
-
-// const qrCode = reader.decode(binaryBitmap);
-
-// if (qrCode) {
-//   return qrCode.getText();
-// }
-// return '';
-Without any arguments.</msg>
-<msg timestamp="20220331 18:39:17.299" level="INFO">${test} = 1</msg>
-<status status="PASS" starttime="20220331 18:39:17.294" endtime="20220331 18:39:17.299"/>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<var>${image_url}</var>
+<arg>//*[@id="reader"]</arg>
+<arg>src</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20220401 14:34:22.658" level="INFO">${image_url} = data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAPoCAYAAABNo9TkAAAgAElEQVR4Xuzb0Y5jWZJD2ar//+ie7gTmaYARA1Ae3xa+6plwmTZpdi9DWf/9n//933/8DwEEEEAAAQQQQAABBBBAAAEEfpTAfxX0H+XvwxFAAAEEEEAAAQQQQAABBBD4h4...</msg>
+<status status="PASS" starttime="20220401 14:34:22.648" endtime="20220401 14:34:22.658"/>
 </kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${test}</arg>
-<arg>1</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20220331 18:39:17.299" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20220331 18:39:17.299" endtime="20220331 18:39:17.299"/>
+<kw name="Decode" library="CustomLib">
+<var>${url}</var>
+<arg>${image_url}</arg>
+<msg timestamp="20220401 14:34:22.695" level="INFO">${url} = https://qr.page/g/3ZSbBI1UyqZ</msg>
+<status status="PASS" starttime="20220401 14:34:22.658" endtime="20220401 14:34:22.695"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220331 18:39:22.300" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220331 18:39:17.299" endtime="20220331 18:39:22.301"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220401 14:34:22.695" endtime="20220401 14:34:22.695"/>
 </kw>
-<status status="PASS" starttime="20220331 18:39:17.294" endtime="20220331 18:39:22.302"/>
+<status status="PASS" starttime="20220401 14:34:22.648" endtime="20220401 14:34:22.695"/>
 </kw>
 <kw name="Check Iframe" library="homeview">
-<kw name="Select Frame" library="SeleniumLibrary">
+<kw name="Select Frame" library="Selenium2Library">
 <arg>//iframe[@id='iframe']</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20220331 18:39:22.304" level="INFO">Selecting frame '//iframe[@id='iframe']'.</msg>
-<status status="PASS" starttime="20220331 18:39:22.303" endtime="20220331 18:39:22.314"/>
+<msg timestamp="20220401 14:34:22.696" level="INFO">Selecting frame '//iframe[@id='iframe']'.</msg>
+<status status="PASS" starttime="20220401 14:34:22.696" endtime="20220401 14:34:22.700"/>
 </kw>
-<kw name="Current Frame Should Contain" library="SeleniumLibrary">
+<kw name="Current Frame Should Contain" library="Selenium2Library">
 <arg>MY BLOG</arg>
 <doc>Verifies that the current frame contains ``text``.</doc>
-<msg timestamp="20220331 18:39:22.319" level="INFO">Current frame contains text 'MY BLOG'.</msg>
-<status status="PASS" starttime="20220331 18:39:22.314" endtime="20220331 18:39:22.319"/>
+<msg timestamp="20220401 14:34:22.703" level="INFO">Current frame contains text 'MY BLOG'.</msg>
+<status status="PASS" starttime="20220401 14:34:22.700" endtime="20220401 14:34:22.703"/>
 </kw>
-<kw name="Unselect Frame" library="SeleniumLibrary">
+<kw name="Unselect Frame" library="Selenium2Library">
 <doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20220331 18:39:22.319" endtime="20220331 18:39:22.321"/>
+<status status="PASS" starttime="20220401 14:34:22.703" endtime="20220401 14:34:22.707"/>
 </kw>
-<status status="PASS" starttime="20220331 18:39:22.302" endtime="20220331 18:39:22.321"/>
+<status status="PASS" starttime="20220401 14:34:22.696" endtime="20220401 14:34:22.707"/>
 </kw>
 <kw name="Click On Link" library="homeview">
-<kw name="Click Element" library="SeleniumLibrary">
+<kw name="Click Element" library="Selenium2Library">
 <arg>//*[@data-qa="wiki-link"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220331 18:39:22.322" level="INFO">Clicking element '//*[@data-qa="wiki-link"]'.</msg>
-<status status="PASS" starttime="20220331 18:39:22.321" endtime="20220331 18:39:22.634"/>
+<msg timestamp="20220401 14:34:22.708" level="INFO">Clicking element '//*[@data-qa="wiki-link"]'.</msg>
+<status status="PASS" starttime="20220401 14:34:22.707" endtime="20220401 14:34:22.943"/>
 </kw>
-<kw name="Get Text" library="SeleniumLibrary">
+<kw name="Get Text" library="Selenium2Library">
 <var>${text}</var>
 <arg>//*[@class="central-textlogo-wrapper"]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220331 18:39:22.641" level="INFO">${text} = Wikipedia
+<msg timestamp="20220401 14:34:22.954" level="INFO">${text} = Wikipedia
 The Free Encyclopedia</msg>
-<status status="PASS" starttime="20220331 18:39:22.634" endtime="20220331 18:39:22.641"/>
+<status status="PASS" starttime="20220401 14:34:22.943" endtime="20220401 14:34:22.954"/>
 </kw>
 <kw name="Should Contain Any" library="BuiltIn">
 <arg>${text}</arg>
 <arg>Wikipedia</arg>
 <doc>Fails if ``container`` does not contain any of the ``*items``.</doc>
-<status status="PASS" starttime="20220331 18:39:22.641" endtime="20220331 18:39:22.641"/>
+<status status="PASS" starttime="20220401 14:34:22.954" endtime="20220401 14:34:22.954"/>
 </kw>
-<status status="PASS" starttime="20220331 18:39:22.321" endtime="20220331 18:39:22.641"/>
+<status status="PASS" starttime="20220401 14:34:22.707" endtime="20220401 14:34:22.955"/>
 </kw>
 <kw name="Search On Wikipedia" library="homeview">
-<kw name="Input Text" library="SeleniumLibrary">
+<kw name="Input Text" library="Selenium2Library">
 <arg>//*[@id="searchInput"]</arg>
 <arg>Selenium</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220331 18:39:22.642" level="INFO">Typing text 'Selenium' into text field '//*[@id="searchInput"]'.</msg>
-<status status="PASS" starttime="20220331 18:39:22.641" endtime="20220331 18:39:22.654"/>
+<msg timestamp="20220401 14:34:22.955" level="INFO">Typing text 'Selenium' into text field '//*[@id="searchInput"]'.</msg>
+<status status="PASS" starttime="20220401 14:34:22.955" endtime="20220401 14:34:22.969"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
+<kw name="Click Element" library="Selenium2Library">
 <arg>class:pure-button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220331 18:39:22.654" level="INFO">Clicking element 'class:pure-button'.</msg>
-<status status="PASS" starttime="20220331 18:39:22.654" endtime="20220331 18:39:23.851"/>
+<msg timestamp="20220401 14:34:22.970" level="INFO">Clicking element 'class:pure-button'.</msg>
+<status status="PASS" starttime="20220401 14:34:22.970" endtime="20220401 14:34:24.480"/>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
+<kw name="Title Should Be" library="Selenium2Library">
 <arg>Selenium - Wikipedia</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220331 18:39:23.853" level="INFO">Page title is 'Selenium - Wikipedia'.</msg>
-<status status="PASS" starttime="20220331 18:39:23.852" endtime="20220331 18:39:23.853"/>
+<msg timestamp="20220401 14:34:24.482" level="INFO">Page title is 'Selenium - Wikipedia'.</msg>
+<status status="PASS" starttime="20220401 14:34:24.480" endtime="20220401 14:34:24.482"/>
 </kw>
-<kw name="Get Text" library="SeleniumLibrary">
+<kw name="Get Text" library="Selenium2Library">
 <var>${text}</var>
 <arg>//*[@id="firstHeading"]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220331 18:39:23.900" level="INFO">${text} = Selenium</msg>
-<status status="PASS" starttime="20220331 18:39:23.853" endtime="20220331 18:39:23.900"/>
+<msg timestamp="20220401 14:34:24.497" level="INFO">${text} = Selenium</msg>
+<status status="PASS" starttime="20220401 14:34:24.482" endtime="20220401 14:34:24.497"/>
 </kw>
 <kw name="Should Contain Any" library="BuiltIn">
 <arg>${text}</arg>
 <arg>Selenium</arg>
 <doc>Fails if ``container`` does not contain any of the ``*items``.</doc>
-<status status="PASS" starttime="20220331 18:39:23.900" endtime="20220331 18:39:23.900"/>
+<status status="PASS" starttime="20220401 14:34:24.498" endtime="20220401 14:34:24.498"/>
 </kw>
-<status status="PASS" starttime="20220331 18:39:22.641" endtime="20220331 18:39:23.901"/>
+<status status="PASS" starttime="20220401 14:34:22.955" endtime="20220401 14:34:24.498"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220331 18:39:23.901" endtime="20220331 18:39:24.315"/>
+<status status="PASS" starttime="20220401 14:34:24.498" endtime="20220401 14:34:24.946"/>
 </kw>
-<status status="PASS" starttime="20220331 18:39:14.223" endtime="20220331 18:39:24.315"/>
+<status status="PASS" starttime="20220401 14:34:19.807" endtime="20220401 14:34:24.946"/>
 </test>
 <doc>A test suite with a single test for valid login.
 
 This test has a workflow that is created using keywords in
 the imported resource file.</doc>
-<status status="PASS" starttime="20220331 18:39:14.079" endtime="20220331 18:39:24.316"/>
-</suite>
-<suite id="s1-s1-s1-s2" name="Test" source="/Users/bryanphang/Documents/Personal/vue-robot-selenium/tests/e2e/Test.robot">
-<test id="s1-s1-s1-s2-t1" name="Open Google &amp; Verify Google" line="7">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.google.com</arg>
-<arg>browser=firefox</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220331 18:39:24.318" level="INFO">Opening browser 'firefox' to base url 'https://www.google.com'.</msg>
-<msg timestamp="20220331 18:39:24.319" level="INFO">Firefox driver log is always forced to to: /Users/bryanphang/Documents/Personal/vue-robot-selenium/geckodriver-8.log</msg>
-<status status="PASS" starttime="20220331 18:39:24.318" endtime="20220331 18:39:26.116"/>
-</kw>
-<kw name="Get Title" library="SeleniumLibrary">
-<var>${Get_title}</var>
-<doc>Returns the title of the current page.</doc>
-<msg timestamp="20220331 18:39:26.123" level="INFO">${Get_title} = Google</msg>
-<status status="PASS" starttime="20220331 18:39:26.116" endtime="20220331 18:39:26.123"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${Get_title}</arg>
-<arg>Google</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220331 18:39:26.123" endtime="20220331 18:39:26.123"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220331 18:39:26.123" endtime="20220331 18:39:26.551"/>
-</kw>
-<status status="PASS" starttime="20220331 18:39:24.318" endtime="20220331 18:39:26.551"/>
-</test>
-<doc>My First Test
-This test will Verify Google</doc>
-<status status="PASS" starttime="20220331 18:39:24.317" endtime="20220331 18:39:26.551"/>
-</suite>
-<status status="PASS" starttime="20220331 18:39:14.079" endtime="20220331 18:39:26.552"/>
-</suite>
-<status status="PASS" starttime="20220331 18:39:14.078" endtime="20220331 18:39:26.552"/>
-</suite>
-<status status="PASS" starttime="20220331 18:39:14.063" endtime="20220331 18:39:26.553"/>
+<status status="PASS" starttime="20220401 14:34:19.328" endtime="20220401 14:34:24.947"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Vue-Robot-Selenium">Vue-Robot-Selenium</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1" name="Tests">Vue-Robot-Selenium.Tests</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="E2E">Vue-Robot-Selenium.Tests.E2E</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="HomeView">Vue-Robot-Selenium.Tests.E2E.HomeView</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s2" name="Test">Vue-Robot-Selenium.Tests.E2E.Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="HomeView">HomeView</stat>
 </suite>
 </statistics>
 <errors>
